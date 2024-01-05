@@ -1,16 +1,13 @@
-const verb = ['skedaddling', 'loved', 'bamboozled', 'Jumped', 'Impersonated'];
-const object = ['a starbucks', 'a dog', 'a lamp', 'a phone', 'a hot dog'];
-const subject = ['Zach was', 'JR was', 'Sid was', 'Nate was', 'Chuck was'];
+const verb = ['skedaddling', 'loving', 'bamboozling', 'Jumping', 'Impersonating'];
+const object = ['starbucks', 'dog', 'lamp', 'phone', 'hot dog'];
+const subject = ['Zach', 'JR', 'Sid', 'Nate', 'Chuck'];
 
 const funnySentence = () => {
-    let pickedVerb = Math.floor(Math.random()*verb.length);
-    let pickedObject = Math.floor(Math.random()*object.length);
-    let pickedSubject = Math.floor(Math.random()*subject.length);
+    let pickedVerb = verb[Math.floor(Math.random()*verb.length)];
+    let pickedObject = object[Math.floor(Math.random()*object.length)];
+    let pickedSubject = subject[Math.floor(Math.random()*subject.length)];
 
-    console.log(pickedVerb);
-    console.log(pickedObject);
-    console.log(pickedSubject);
-    return pickedVerb + pickedObject + pickedSubject;
+    return `\n${pickedSubject} was ${pickedVerb} a ${pickedObject}.\n`;
 };
 
 console.log(funnySentence());
